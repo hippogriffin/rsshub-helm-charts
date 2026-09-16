@@ -6,7 +6,6 @@ metadata:
   name: {{ template "rsshub.redis.fullname" . }}
   labels:
     {{- include "rsshub.labels" . | nindent 4 }}
-    app.kubernetes.io/version: {{ .Values.redis.image.tag | quote }}
 spec:
   selector:
     matchLabels:
