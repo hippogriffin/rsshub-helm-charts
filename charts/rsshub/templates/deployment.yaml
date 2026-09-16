@@ -5,6 +5,7 @@ metadata:
   name: {{ include "rsshub.fullname" . }}
   labels:
     {{- include "rsshub.labels" . | nindent 4 }}
+    {{- include "rsshub.selectorLabels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

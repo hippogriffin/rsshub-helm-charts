@@ -35,7 +35,6 @@ Common labels
 */}}
 {{- define "rsshub.labels" -}}
 helm.sh/chart: {{ include "rsshub.chart" . }}
-{{ include "rsshub.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
